@@ -1,3 +1,6 @@
+# py -m pip install isbnlib
+from isbnlib import meta
+
 
 def getEANCheckDigit(digits):
     sum = 0
@@ -27,3 +30,13 @@ assert isEAN13Valid("0123455432100")
 assert isEAN13Valid("9780345391803")
 assert isEAN13Valid("9780345391827")
 
+while True:
+    num = input("Input / Scan barcode: ")
+    if isEAN13Valid(num):
+        print("Barcode", num, "is valid")
+        data = meta(num)
+        #print(data)
+        name = data['Title']
+        print(num, " is ", name)
+    else:
+        print("Barcode invalid")
