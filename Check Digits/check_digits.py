@@ -25,7 +25,6 @@ def isEAN13Valid(barcode):
     
     
 assert isEAN13Valid("4006381333931")
-
 assert isEAN13Valid("0123455432100")
 assert isEAN13Valid("9780345391803")
 assert isEAN13Valid("9780345391827")
@@ -33,10 +32,13 @@ assert isEAN13Valid("9780345391827")
 while True:
     num = input("Input / Scan barcode: ")
     if isEAN13Valid(num):
-        print("Barcode", num, "is valid")
-        data = meta(num)
-        #print(data)
-        name = data['Title']
-        print(num, " is ", name)
+        try:
+            print("Barcode", num, "is valid")
+            data = meta(num)
+            #print(data)
+            name = data['Title']
+            print(num, " is ", name)
+        except:
+            print("Some Issue")
     else:
         print("Barcode invalid")
