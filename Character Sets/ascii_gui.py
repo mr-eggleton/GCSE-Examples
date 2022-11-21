@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+# python.exe -m pip install pysimplegui
 # https://www.pysimplegui.org/en/latest/
 
 #sg.theme('GreenTan') # give our window a spiffy set of colors
