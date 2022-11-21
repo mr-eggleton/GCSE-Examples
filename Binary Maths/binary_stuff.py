@@ -363,10 +363,12 @@ def getBinary(message):
         return getBinary(message)
     return value
 
-binary1 = getBinary("Please input first binary number")
-binary2 = getBinary("Please input second binary number")
-(sSum, C) = binaryAdd(binary1, binary2)
 
-print("Result", sSum)
-if C:
-    print("There was an overflow error")
+if __name__ == "__main__":
+    binary1 = getBinary("Please input first binary number")
+    binary2 = getBinary("Please input second binary number")
+    (sSum, C) = binaryAdd(binary1, binary2)
+
+    print("Result", sSum)
+    if C:
+        print("There was an overflow error")
