@@ -369,6 +369,6 @@ if __name__ == "__main__":
     binary2 = getBinary("Please input second binary number")
     (sSum, C) = binaryAdd(binary1, binary2)
 
-    print("Result", sSum)
+    #print("Result", sSum)
     if C:
         print("There was an overflow error")

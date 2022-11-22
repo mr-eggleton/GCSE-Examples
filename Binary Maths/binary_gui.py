@@ -57,7 +57,7 @@ layout = [
         [sg.Exit()]
     ]
 
-window = sg.Window('ASCII Convertor', layout)
+window = sg.Window('Binary Maths GUI', layout)
 
 while True:     # The Event Loop
     event, values = window.read()
