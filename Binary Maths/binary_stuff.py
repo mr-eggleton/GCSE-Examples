@@ -233,6 +233,23 @@ def _binaryAdd(a,b):
         print("sSum", sSum)
     return (sSum, C)
 
+def bin2dec(a):
+    return str(int(a,2))
+
+assert bin2dec("0") == "0"
+assert bin2dec("1") == "1"
+assert bin2dec("1001") == "9"
+assert bin2dec("1010") == "10"
+
+def dec2hex(a):
+    return f'{int(a):X}'
+
+assert dec2hex("0") == "0"
+assert dec2hex("1") == "1"
+assert dec2hex("9") == "9"
+assert dec2hex("10") == "A"
+assert dec2hex("17") == "11"
+
 
 def __binaryAdd(a,b):
     iLength = max(len(a),len(b))
